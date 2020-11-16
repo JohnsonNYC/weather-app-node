@@ -10,6 +10,7 @@ const request = require('request')
 
 const forecast = (lat, long, callback) => {
     //Step1: Provide API 
+    const url = `http://api.weatherstack.com/current?access_key=86982a8f6ad39f3c75b4653de2efb51f&query=${long},${lat}&units=f`
      // Step2: Parse and error handle API
     request({url, json:true}, (error, {body} )=>{
         //Step 3: Callback(error,response) Do something when error is present. Do something when response is present 
